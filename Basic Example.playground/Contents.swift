@@ -416,6 +416,69 @@ func forLoopExample(){
     }
 }
 
+func continueStatementExample(){
+    
+    print("continueStatementExample :")
+
+    
+    for i in 1...10 {
+        
+        if i % 2 == 0 {
+         continue
+        }
+        
+    print(i)
+    }
+}
+
+func breakcStatementExample(){
+    
+    print("breakcStatementExample :")
+
+    
+    for i in 1...10 {
+        
+        if i % 2 == 0 {
+         break
+        }
+        
+    print(i)
+    }
+}
+
+func fallthroughStatementExample(){
+
+    
+    let anotherCharacter: Character = "B"
+    switch anotherCharacter {
+    case "a": // Invalid, the case has an empty body
+        print("The letter a")
+    case "A":
+       print("The letter A")
+       fallthrough
+    case "B":
+       print("The letter B")
+    case "C":
+       print("The letter B")
+    default:
+       print("Not the letter A")
+    }// This will report a compile-time error
+    
+}
+
+func returnStatementExample(){
+    
+    print("Before return")
+    
+    return
+     
+    let str = "After return"
+    print(str)
+}
+
+fallthroughStatementExample()
+
+continueStatementExample()
 
 forLoopExample()
 
