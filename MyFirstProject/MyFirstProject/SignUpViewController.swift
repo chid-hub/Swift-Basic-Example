@@ -54,6 +54,14 @@ class SignUpViewController: UIViewController {
         }
         else {
             print("signUp successful")
+            
+            let signUp = ["firstName" : firstName , "lastname" : lastName ,"emailId" : emailId , "password" : password ]
+            
+            let defaults = UserDefaults.standard
+            
+            defaults.setValue(signUp, forKey: "signUp_key")
+            
+            self.navigationController?.popViewController(animated: true)
         }
     
     }
